@@ -35,7 +35,11 @@
     return ret;
   }());
   
-  alert(IE.isTheBrowser + ";" + IE.actualVersion);
+  
+  if (IE.isTheBrowser && IE.actualVersion <= 10) {
+    alert("The user should get a prompt to update IE.  The current browser version is: " + IE.actualVersion);
+  }
+  
 
   </script>
 </head>
